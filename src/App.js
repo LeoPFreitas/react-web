@@ -3,17 +3,16 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import "./App.css";
-
 import HomePage from "./pages/homepage/homepage";
 import ShopPage from "./pages/shop/shop";
 import Header from "./components/header/header";
 import Sign from "./pages/sign/sign";
 import CheckoutPage from "./pages/checkout/checkout";
-
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/userActions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
+
+import "./App.css";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
